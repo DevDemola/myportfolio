@@ -1,0 +1,16 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Sora", sans-serif;
+  /* font-family: "Tangerine", cursive; */
+  /* font-family: "Elms Sans", sans-serif; */
+  /* font-family: "Dancing Script", cursive; */
+  /* font-family: "Aguafina Script", cursive; */
+  font-weight: 900%;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}

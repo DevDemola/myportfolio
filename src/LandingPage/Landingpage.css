@@ -1,0 +1,147 @@
+/* Landingpage.css */
+
+.Body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+  min-height: 100vh;
+  background-color: #0b1e3d; /* navy blue */
+  color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  gap: 50px;
+}
+
+.subtext {
+  color: #ff6b6b; /* accent color */
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+
+  /* Animation */
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #ffffff;
+
+  /* Animation */
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+
+article span {
+  display: block;
+  font-size: 1.1rem;
+  color: white;
+  margin-top: 10px;
+
+  /* Animation */
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+
+.btn {
+  width: 35%;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff4b4b;
+  transform: translateY(-3px);
+}
+
+.Body img {
+  height: 600px;
+  object-fit: cover;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+
+  /* Animation */
+  opacity: 0;
+  animation: fadeInRight 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.Body img:hover {
+  transform: scale(1.05);
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .Body {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  @media (max-width: 480px) {
+    .btn {
+      width: 70%;
+      height: 40px;
+      font-size: 0.9rem;
+    }
+  }
+
+  .Body img {
+    height: 400px;
+    margin-top: 30px;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  article span {
+    font-size: 1rem;
+  }
+
+  .Body img {
+    height: 300px;
+  }
+}
