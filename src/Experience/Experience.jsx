@@ -7,7 +7,7 @@ const Experience = () => {
     <section className="experience" id="experience">
       <div className="experience-container">
         <div className="experience-image">
-          <img src="./Splita.png" alt="Experience" />
+          <img src="./Team Splita.jpg" alt="Experience" />
         </div>
 
         <div className="experience-text">
