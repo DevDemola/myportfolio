@@ -9,25 +9,41 @@ const Projects = () => {
       stack: ["Reactjs", "StyledComponent", "Javascript"],
       live: "https://splita.vercel.app/",
     },
+    // {
+    //   title: "DAWN EATS - Web app for fast food delivery",
+    //   image: "/Splita.png",
+    //   desc: "A mobile CRUD application built with React Native and Context API for managing and updating tasks in a smooth interface.",
+    //   stack: ["Reactjs", "Vanilla css", "Javascript"],
+    //   live: "#",
+    // },
+    // {
+    //   title: "UPLAM – A church website",
+    //   image: "/Splita.png",
+    //   desc: "A personal blog site to share insights, moments, and experiences from my developer journey.",
+    //   stack: ["React", "Tailwind CSS"],
+
+    //   live: "#",
+    // },
     {
-      title: "DAWN EATS - Web app for fast food delivery",
-      image: "/Splita.png",
-      desc: "A mobile CRUD application built with React Native and Context API for managing and updating tasks in a smooth interface.",
-      stack: ["Reactjs", "Vanilla css", "Javascript"],
+      title: "FashionForAll – An ecommerce website",
+      image: "/Fashion.png",
+      desc: "FashionForAll is a modern fashion brand creating stylish, high-quality pieces that let people express themselves with confidence and individuality",
+      stack: ["Reactjs", "Tailwind CSS","Context Api"],
+
       live: "#",
     },
     {
-      title: "UPLAM – A church website",
-      image: "/Splita.png",
-      desc: "A personal blog site to share insights, moments, and experiences from my developer journey.",
-      stack: ["React", "Tailwind CSS"],
+      title: "Shineon Cosmetics Clone – A skincare ecommerce website",
+      image: "/Shineon.png",
+      desc: "Cloned the ShineOn Cosmetics website to practice responsive design, UI/UX, and frontend development skills..",
+      stack: ["Reactjs", "Tailwind CSS"],
 
       live: "#",
     },
   ];
   return (
     <div>
-      <section className="projects-section">
+      <section className="projects-section" id="projects">
         <div className="projects-header">
           <h2>Featured Projects</h2>
           <p>
@@ -54,7 +70,7 @@ const Projects = () => {
                 </div>
 
                 <div className="project-links">
-                  <a target="_blank">🔗 Live</a>
+                  <a target="_blank" href={proj.live}>🔗 Live</a>
                 </div>
               </div>
             </div>

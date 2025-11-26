@@ -18,12 +18,12 @@ const Landingpage = () => {
       <div>
         <div>
           <img
-            src="me.png"
+            src="me.jpg"
             style={{
               height: "600px",
-              padding: "30px",
-              borderRadius: "2000px",
-              paddingLeft: "90px",
+              // padding: "30px",
+              borderRadius: "10px",
+              // paddingLeft: "90px",
             }}
           />
         </div>

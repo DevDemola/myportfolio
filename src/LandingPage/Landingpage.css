@@ -69,12 +69,12 @@ article span {
 }
 
 .Body img {
-  height: 600px;
+  height: 100px;
   object-fit: cover;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   transition: transform 0.4s ease;
 
-  /* Animation */
+ 
   opacity: 0;
   animation: fadeInRight 1s ease-in-out forwards;
   animation-delay: 1s;

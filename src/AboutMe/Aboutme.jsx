@@ -6,7 +6,8 @@ const Aboutme = () => {
     <section className="about" id="about">
       <h1>About Me</h1>
       <p>
-        I’m a frontend developer who values beauty in both design and code.<br />
+        I’m a frontend developer who values beauty in both design and code.
+        <br />
         My focus is on creating web experiences that feel smooth, elegant, and
         intentional—the kind of interfaces that not only work but leave a
         lasting impression.
@@ -23,7 +24,16 @@ const Aboutme = () => {
         curiosity, attention to detail, and the joy I find in making ideas come
         alive.
       </p>
-      <button>Resume →</button>
+      <button
+        onClick={() =>
+          window.open(
+            "https://docs.google.com/document/d/1ZtmyZDJQQt2h_tkicAmUf0pdDHO_qGQxghItosU6q0U/edit?usp=sharing",
+            "_blank"
+          )
+        }
+      >
+        Resume →
+      </button>
     </section>
   );
 };
