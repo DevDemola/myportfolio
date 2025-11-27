@@ -30,7 +30,7 @@ const Projects = () => {
       desc: "FashionForAll is a modern fashion brand creating stylish, high-quality pieces that let people express themselves with confidence and individuality",
       stack: ["Reactjs", "Tailwind CSS","Context Api"],
 
-      live: "#",
+      live: "",
     },
     {
       title: "Shineon Cosmetics Clone – A skincare ecommerce website",
@@ -38,7 +38,7 @@ const Projects = () => {
       desc: "Cloned the ShineOn Cosmetics website to practice responsive design, UI/UX, and frontend development skills..",
       stack: ["Reactjs", "Tailwind CSS"],
 
-      live: "#",
+      live: "",
     },
   ];
   return (
@@ -70,7 +70,7 @@ const Projects = () => {
                 </div>
 
                 <div className="project-links">
-                  <a target="_blank" href={proj.live}>🔗 Live</a>
+                  <a target="_blank" href={proj.live}>🔗Live</a>
                 </div>
               </div>
             </div>

@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 65vh; /* ⚠ this will be overridden on small screens */
+  height: 65vh;
   background-color: #0b1e3d;
   padding: 0 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -31,11 +31,11 @@
   margin: 0 auto;
 }
 
+/* DESKTOP */
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 25px;
-  justify-items: center;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -46,6 +46,7 @@
   padding: 20px;
   border-radius: 15px;
   text-align: center;
+  width: 130px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -61,7 +62,8 @@
   height: 60px;
   margin-bottom: 15px;
 }
-.icon{
+
+.icon {
   font-size: 30px;
 }
 
@@ -75,8 +77,17 @@
 /* 📱 Tablets */
 @media (max-width: 768px) {
   .skills-section {
-    height: auto; /* 🟢 FIX */
+    height: auto;
     padding: 40px 20px;
+  }
+
+  .skills-grid {
+    flex-direction: column;      /* 🟢 stack vertically */
+  }
+
+  .skill-card {
+    width: 80%;                 /* 🟢 wider on mobile */
+    max-width: 300px;
   }
 
   .skills-left h2 {
@@ -96,8 +107,18 @@
 /* 📱 Phones */
 @media (max-width: 480px) {
   .skills-section {
-    height: auto; /* 🟢 FIX */
+    height: auto;
     padding: 40px 10px;
+  }
+
+  .skills-grid {
+    flex-direction: column;     /* 🟢 always column */
+    gap: 20px;
+  }
+
+  .skill-card {
+    width: 90%;
+    max-width: 270px;
   }
 
   .skills-left h2 {
