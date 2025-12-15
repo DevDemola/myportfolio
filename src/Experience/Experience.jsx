@@ -12,7 +12,7 @@ const Experience = () => {
 
         <div className="experience-text">
           <h2>My Journey at Curve Africa</h2>
-          <h4>Curve Africa | Jun 2025 - Oct 2025</h4>
+          <h4> The Curve Africa | MAY 2025 - NOV 2025</h4>
           <p>
             Joining Curve Africa was a transformative experience for me. I
             gained hands-on experience building real-world web applications,

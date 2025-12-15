@@ -16,11 +16,16 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Show success toast
-    toast.success("Message sent successfully!");
+    const whatsappNumber = "2348012345678"; // <-- replace with your WhatsApp number (no +, no spaces)
+    const messageText = `Hi! My name is ${formData.name}. Email: ${formData.email}. Message: ${formData.message}`;
+    const url = `https://wa.me/${2348158411808}?text=${encodeURIComponent(
+      messageText
+    )}`;
 
-    // Clear form fields
-    setFormData({ name: "", email: "", message: "" });
+    window.open(url, "_blank"); // opens W
+    toast.success("Opening WhatsApp...");
+
+    setFormData({ name: "", email: "", message: "" }); // clear form
   };
 
   return (
@@ -28,11 +33,18 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-left">
           <h2>Contact Me</h2>
-          <p>Got a project, internship, or opportunity? I’d love to hear from you.</p>
+          <p>
+            Got a project, internship, or opportunity? I’d love to hear from
+            you.
+          </p>
 
           <div className="contact-info">
-            <p><strong>Email:</strong> omiyejuwonademola@gmail.com</p>
-            <p><strong>Location:</strong> Lagos, Nigeria</p>
+            <p>
+              <strong>Email:</strong> omiyejuwonademola@gmail.com
+            </p>
+            <p>
+              <strong>Location:</strong> Lagos, Nigeria
+            </p>
           </div>
         </div>
 
