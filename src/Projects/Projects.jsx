@@ -16,30 +16,30 @@ const Projects = () => {
     //   stack: ["Reactjs", "Vanilla css", "Javascript"],
     //   live: "#",
     // },
-    // {
-    //   title: "UPLAM – A church website",
-    //   image: "/Splita.png",
-    //   desc: "A personal blog site to share insights, moments, and experiences from my developer journey.",
-    //   stack: ["React", "Tailwind CSS"],
+    {
+      title: "URBAN FURNITURE-a sleek furniture website",
+      image: "/urbanfurniture.png",
+      desc: " I built a professional digital representation of a furniture business , a website that’s clean, navigable, and ready to show products and tell the brand story. Even without e-commerce functionality, it works as a showcase and contact hub, which is often the first step for creative businesses.",
+      stack: ["React", "Tailwind CSS"],
 
-    //   live: "#",
-    // },
+      live: "https://urbanfurniture-ten.vercel.app/",
+    },
     {
       title: "FashionForAll – An ecommerce website",
       image: "/Fashion.png",
       desc: "FashionForAll is a modern fashion brand creating stylish, high-quality pieces that let people express themselves with confidence and individuality",
-      stack: ["Reactjs", "Tailwind CSS","Context Api"],
+      stack: ["Reactjs", "Tailwind CSS", "Context Api"],
 
       live: "",
     },
-    {
-      title: "Shineon Cosmetics Clone – A skincare ecommerce website",
-      image: "/Shineon.png",
-      desc: "Cloned the ShineOn Cosmetics website to practice responsive design, UI/UX, and frontend development skills..",
-      stack: ["Reactjs", "Tailwind CSS"],
+    // {
+    //   title: "Shineon Cosmetics Clone – A skincare ecommerce website",
+    //   image: "/Shineon.png",
+    //   desc: "Cloned the ShineOn Cosmetics website to practice responsive design, UI/UX, and frontend development skills..",
+    //   stack: ["Reactjs", "Tailwind CSS"],
 
-      live: "",
-    },
+    //   live: "",
+    // },
   ];
   return (
     <div>
@@ -70,7 +70,9 @@ const Projects = () => {
                 </div>
 
                 <div className="project-links">
-                  <a target="_blank" href={proj.live}>🔗Live</a>
+                  <a target="_blank" href={proj.live}>
+                    🔗Live
+                  </a>
                 </div>
               </div>
             </div>
