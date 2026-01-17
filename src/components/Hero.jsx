@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import "./Hero.css";
-// import profileImg from "../assets/profile.jpg"; // replace with your image path
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="hero">
       <div className="hero-container">
@@ -18,26 +20,31 @@ const Hero = () => {
           <h1>Ademola Omiyejuwon</h1>
 
           <h2>
-            Software Engineer & Tech Enthusiast<br />
-            {/* <span>(Smart Contracts) Developer</span> */}
+            Software Engineer & Tech Enthusiast
           </h2>
 
           <p>
             I create thoughtful, scalable software solutions and develop smart
-            contracts for decentralized applications. Passionate about tech
-            that empowers people and solves real-world problems.
+            contracts for decentralized applications.
           </p>
 
           <div className="hero-actions">
-            <a href="#projects" className="primary-btn">
+            <button
+              className="primary-btn"
+              onClick={() => navigate("/projects")}
+            >
               See What I’ve Built →
-            </a>
+            </button>
 
-            <a href="#contact" className="secondary-btn">
+            <button
+              className="secondary-btn"
+              onClick={() => navigate("/contact")}
+            >
               Contact Me ⚡
-            </a>
+            </button>
           </div>
         </div>
+
       </div>
     </section>
   );
