@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Navbar.css";
+import "./NavBar.css";
 import { LuHouse, LuMousePointer2 } from "react-icons/lu";
 import { FiUser } from "react-icons/fi";
 import { IoCodeSharp } from "react-icons/io5";
@@ -11,13 +11,11 @@ const NavBar = () => {
   return (
     <header className="navbar">
       <div className="navbar-inner">
-        {/* LOGO */}
         <div className="logo">
           <span className="name">Ademola Omiyejuwon :)</span>
           <span className="role">Software Engineer</span>
         </div>
 
-        {/* DESKTOP NAV */}
         <nav className="nav-links">
           <NavLink to="/" end className="nav-item">
             <LuHouse className="nav-icon" />
@@ -40,7 +38,7 @@ const NavBar = () => {
           </NavLink>
         </nav>
 
-        {/* HAMBURGER */}
+      
         <button
           className={`hamburger ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -51,7 +49,7 @@ const NavBar = () => {
         </button>
       </div>
 
-      {/* MOBILE MENU */}
+      
       {menuOpen && (
         <div className="mobile-menu">
           <NavLink to="/" end onClick={() => setMenuOpen(false)}>
