@@ -1,27 +1,23 @@
-import Aboutme from "./AboutMe/Aboutme";
-import Contact from "./Contact/Contact";
-import Experience from "./Experience/Experience";
-import Footer from "./Footer/Footer";
-import Header from "./Header/Header";
-import Landingpage from "./LandingPage/Landingpage";
-import Projects from "./Projects/Projects";
-import Skills from "./SKILLS/Skills";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import Hero from "./components/Hero";
 
-const App = () => {
+function App() {
   return (
     <>
-      <Header />
+      <NavBar />
 
-      <Landingpage id="landing" />
-      <Aboutme id="about" />
-      <Skills id="skills" />
-      <Projects id="projects" />
-      <Experience id="experience" />
-      <Contact id="contact" />
-
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </>
   );
-};
+}
 
 export default App;
