@@ -12,33 +12,33 @@ const NavBar = () => {
     <header className="navbar">
       <div className="navbar-inner">
         <div className="logo">
-          <span className="name">Ademola Omiyejuwon :)</span>
+          <span className="name">
+            Ademola Omiyejuwon <span className="hi">:)</span>
+          </span>
           <span className="role">Software Engineer</span>
         </div>
 
+        {/* Desktop Nav */}
         <nav className="nav-links">
           <NavLink to="/" end className="nav-item">
             <LuHouse className="nav-icon" />
             <span>Home</span>
           </NavLink>
-
           <NavLink to="/about" className="nav-item">
             <FiUser className="nav-icon" />
             <span>About</span>
           </NavLink>
-
           <NavLink to="/projects" className="nav-item">
             <IoCodeSharp className="nav-icon" />
             <span>Projects</span>
           </NavLink>
-
           <NavLink to="/contact" className="nav-cta">
             <span>Let’s Build</span>
             <LuMousePointer2 className="cta-icon" />
           </NavLink>
         </nav>
 
-      
+        {/* Hamburger */}
         <button
           className={`hamburger ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -49,27 +49,19 @@ const NavBar = () => {
         </button>
       </div>
 
-      
-      {menuOpen && (
-        <div className="mobile-menu">
-          <NavLink to="/" end onClick={() => setMenuOpen(false)}>
-            Home
-          </NavLink>
-          <NavLink to="/about" onClick={() => setMenuOpen(false)}>
-            About
-          </NavLink>
-          <NavLink to="/projects" onClick={() => setMenuOpen(false)}>
-            Projects
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className="mobile-cta"
-            onClick={() => setMenuOpen(false)}
-          >
-            Let’s Build
-          </NavLink>
-        </div>
-      )}
+      {/* Mobile Menu - always rendered */}
+      <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
+        <NavLink to="/" end onClick={() => setMenuOpen(false)}>Home</NavLink>
+        <NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
+        <NavLink to="/projects" onClick={() => setMenuOpen(false)}>Projects</NavLink>
+        <NavLink
+          to="/contact"
+          className="mobile-cta"
+          onClick={() => setMenuOpen(false)}
+        >
+          Let’s Build
+        </NavLink>
+      </div>
     </header>
   );
 };

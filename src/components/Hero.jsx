@@ -7,7 +7,6 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-container">
-
         {/* LEFT – IMAGE */}
         <div className="hero-image">
           <div className="image-ring">
@@ -19,9 +18,7 @@ const Hero = () => {
         <div className="hero-content">
           <h1>Ademola Omiyejuwon</h1>
 
-          <h2>
-            Software Engineer & Tech Enthusiast
-          </h2>
+          <h2>Software Engineer & Tech Enthusiast</h2>
 
           <p>
             I create thoughtful, scalable software solutions and develop smart
@@ -44,7 +41,6 @@ const Hero = () => {
             </button>
           </div>
         </div>
-
       </div>
     </section>
   );

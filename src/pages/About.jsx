@@ -1,6 +1,11 @@
 import React from "react";
 import { FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaFigma } from "react-icons/fa";
-import { SiTypescript, SiJavascript, SiNextdotjs, SiSolidity } from "react-icons/si";
+import {
+  SiTypescript,
+  SiJavascript,
+  SiNextdotjs,
+  SiSolidity,
+} from "react-icons/si";
 import "./About.css";
 
 // Experiences remain the same
@@ -11,7 +16,7 @@ const experiences = [
     duration: "Jan 2026 - Present",
     description:
       "Built responsive web applications with React, improving performance and user experience.",
-    logo: "/onus.jpeg", 
+    logo: "/onus.jpeg",
   },
   {
     role: "Frontend Developer",
@@ -30,9 +35,9 @@ const skills = [
   { name: "JavaScript", icon: <SiJavascript />, color: "#f7df1e" },
   { name: "CSS3", icon: <FaCss3Alt />, color: "#264de4" },
   { name: "HTML5", icon: <FaHtml5 />, color: "#e34f26" },
-  { name: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
+  // { name: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
   { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
-  { name: "Solidity", icon: <SiSolidity />, color: "#363636" },
+  // { name: "Solidity", icon: <SiSolidity />, color: "#363636" },
   { name: "UI/UX Design", icon: <FaFigma />, color: "#f24e1e" },
 ];
 
@@ -40,25 +45,27 @@ const About = () => {
   return (
     <section id="about" className="about grid-bg">
       <div className="about-container">
-
         <span className="about-eyebrow">ABOUT ME</span>
 
         <h2 className="about-title">
-          I don’t just write code.<br />
+          I don’t just write code.
+          <br />
           <span>I design how systems think.</span>
         </h2>
 
         <p className="about-text">
-          I’m a software engineer who enjoys building clean, scalable systems
-          that actually make sense. From intuitive user interfaces to smart
-          contracts that run trustlessly on the blockchain, I care deeply about
-          how things work under the hood.
+          I’m a Frontend Developer who builds interactive, responsive, and
+          beautiful web experiences. I turn complex interfaces into intuitive
+          designs that users love, focusing on performance, accessibility, and
+          smooth interactions.
         </p>
 
         <p className="about-text">
-          My approach blends engineering discipline with product thinking.
-          I believe good software should feel obvious to users, solid to
-          developers, and resilient in the real world.
+          My approach blends engineering discipline with design thinking. I
+          believe good frontend code should feel obvious to users, maintainable
+          for developers, and resilient across devices. I’m passionate about
+          crafting interfaces that are not only functional but delightful to
+          use.
         </p>
 
         <div className="about-highlights">
@@ -81,8 +88,8 @@ const About = () => {
           <div className="highlight-card">
             <h3>Problem Solving</h3>
             <p>
-              Breaking down complex problems into simple, elegant solutions
-              that scale.
+              Breaking down complex problems into simple, elegant solutions that
+              scale.
             </p>
           </div>
         </div>
@@ -92,7 +99,11 @@ const About = () => {
           <h2 className="skills-title">My Skills</h2>
           <div className="skills-container">
             {skills.map((skill, index) => (
-              <div key={index} className="skill-icon-wrapper" title={skill.name}>
+              <div
+                key={index}
+                className="skill-icon-wrapper"
+                title={skill.name}
+              >
                 <div className="skill-icon" style={{ color: skill.color }}>
                   {skill.icon}
                 </div>
@@ -108,9 +119,15 @@ const About = () => {
           {experiences.map((exp, index) => (
             <div key={index} className="experience-card">
               <div className="experience-header">
-                <img src={exp.logo} alt={exp.company} className="company-logo" />
+                <img
+                  src={exp.logo}
+                  alt={exp.company}
+                  className="company-logo"
+                />
                 <div className="experience-info">
-                  <h3>{exp.role} - {exp.company}</h3>
+                  <h3>
+                    {exp.role} - {exp.company}
+                  </h3>
                   <span className="experience-duration">{exp.duration}</span>
                 </div>
               </div>
@@ -118,7 +135,6 @@ const About = () => {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

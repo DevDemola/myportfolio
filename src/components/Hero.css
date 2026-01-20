@@ -13,11 +13,11 @@
   margin: auto;
   display: grid;
   grid-template-columns: 420px 1fr;
-  gap: 55px;
+  gap: 35px;
   align-items: center;
 }
 
-/* IMAGE */
+
 .hero-image {
   display: flex;
   justify-content: center;
@@ -25,7 +25,7 @@
 
 .image-ring {
   width: 320px;
-  height: 320px;
+  height: 325px;
   border-radius: 50%;
   padding: 6px;
   background: linear-gradient(135deg, #cfa46a, #8b6b3e);
@@ -39,7 +39,6 @@
   background: #222;
 }
 
-/* CONTENT */
 .hero-content h1 {
   font-size: 45px;
   font-weight: 700;
@@ -91,6 +90,7 @@
   letter-spacing: 0.3px;
   cursor: pointer;
   position: relative;
+  font-family: "Poppins",sans-serif;
   overflow: hidden;
   box-shadow:
     0 8px 24px rgba(207, 164, 106, 0.35),
@@ -120,13 +120,13 @@
   transform: translateX(100%);
 }
 
-.primary-btn:hover {
+/* .primary-btn:hover {
   transform: translateY(-3px);
   box-shadow:
     0 14px 40px rgba(207, 164, 106, 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
   filter: brightness(1.05);
-}
+} */
 
 .primary-btn:active {
   transform: translateY(-1px);
@@ -153,7 +153,7 @@
 }
 
 .secondary-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+  /* background: rgba(255, 255, 255, 0.1); */
   border-color: rgba(207, 164, 106, 0.6);
   transform: translateY(-2px);
 }
