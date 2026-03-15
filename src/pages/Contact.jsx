@@ -16,7 +16,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you could integrate email sending or API call
+
     setSubmitted(true);
     setFormData({ name: "", email: "", message: "" });
     setTimeout(() => setSubmitted(false), 3000);
@@ -32,7 +32,6 @@ const Contact = () => {
         </p>
 
         <div className="contact-content">
-          {/* Contact Info */}
           <div className="contact-info">
             <div className="info-card">
               <FaEnvelope className="info-icon" />
@@ -51,7 +50,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
+          
           <div className="contact-form-wrapper">
             <form className="contact-form" onSubmit={handleSubmit}>
               <input

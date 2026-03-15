@@ -3,19 +3,23 @@ import { FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaFigma } from "react-icons/fa";
 import {
   SiTypescript,
   SiJavascript,
-  SiNextdotjs,
-  SiSolidity,
+  // SiNextdotjs,
+  // SiSolidity,
+  SiFirebase,
+  // SiVueDotJs,
+  SiAngular,
+  SiTailwindcss,
+  SiVuedotjs,
 } from "react-icons/si";
 import "./About.css";
 
-// Experiences remain the same
 const experiences = [
   {
     role: "Frontend Developer",
     company: "PayOnUs",
     duration: "Jan 2026 - Present",
     description:
-      "Built responsive web applications with React, improving performance and user experience.",
+      "Currently interning at Payonus, where I contribute to building and improving web applications, working with modern technologies, and gaining hands-on experience in fintech solutions.",
     logo: "/onus.jpeg",
   },
   {
@@ -26,9 +30,16 @@ const experiences = [
       "Designed intuitive interfaces and collaborated with developers to implement seamless designs.",
     logo: "/curve.png",
   },
+  {
+    role: "Frontend Developer",
+    company: "SPLITA",
+    duration: "May 2025 - Nov 2025",
+    description:
+      "Building responsive and user-friendly interfaces, turning complex designs into seamless web experiences using modern frontend technologies.",
+    logo: "/splitalogo.png",
+  },
 ];
 
-// Skills with icons and brand colors
 const skills = [
   { name: "React", icon: <FaReact />, color: "#61dafb" },
   { name: "TypeScript", icon: <SiTypescript />, color: "#3178c6" },
@@ -39,6 +50,10 @@ const skills = [
   { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
   // { name: "Solidity", icon: <SiSolidity />, color: "#363636" },
   { name: "UI/UX Design", icon: <FaFigma />, color: "#f24e1e" },
+  { name: "Firebase", icon: <SiFirebase />, color: "#ffca28" },
+  { name: "Vue.js", icon: <SiVuedotjs />, color: "#42b883" },
+  { name: "Angular", icon: <SiAngular />, color: "#dd0031" },
+  { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38b2ac" },
 ];
 
 const About = () => {
@@ -78,14 +93,6 @@ const About = () => {
           </div>
 
           <div className="highlight-card">
-            <h3>Blockchain & Smart Contracts</h3>
-            <p>
-              Designing secure, auditable smart contracts that power
-              decentralized applications.
-            </p>
-          </div>
-
-          <div className="highlight-card">
             <h3>Problem Solving</h3>
             <p>
               Breaking down complex problems into simple, elegant solutions that
@@ -94,7 +101,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Skills Section with Icons */}
         <div className="about-skills">
           <h2 className="skills-title">My Skills</h2>
           <div className="skills-container">
@@ -113,7 +119,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Experiences Section with Logos */}
         <div className="about-experiences">
           <h2 className="experiences-title">My Experiences</h2>
           {experiences.map((exp, index) => (

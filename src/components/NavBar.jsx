@@ -12,13 +12,10 @@ const NavBar = () => {
     <header className="navbar">
       <div className="navbar-inner">
         <div className="logo">
-          <span className="name">
-            Ademola Omiyejuwon <span className="hi">:)</span>
-          </span>
-          <span className="role">Software Engineer</span>
+          <span className="name">Ademola Omiyejuwon</span>
+          {/* <span className="role">Software Engineer</span> */}
         </div>
 
-        {/* Desktop Nav */}
         <nav className="nav-links">
           <NavLink to="/" end className="nav-item">
             <LuHouse className="nav-icon" />
@@ -38,7 +35,6 @@ const NavBar = () => {
           </NavLink>
         </nav>
 
-        {/* Hamburger */}
         <button
           className={`hamburger ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -49,11 +45,16 @@ const NavBar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu - always rendered */}
       <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
-        <NavLink to="/" end onClick={() => setMenuOpen(false)}>Home</NavLink>
-        <NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
-        <NavLink to="/projects" onClick={() => setMenuOpen(false)}>Projects</NavLink>
+        <NavLink to="/" end onClick={() => setMenuOpen(false)}>
+          Home
+        </NavLink>
+        <NavLink to="/about" onClick={() => setMenuOpen(false)}>
+          About
+        </NavLink>
+        <NavLink to="/projects" onClick={() => setMenuOpen(false)}>
+          Projects
+        </NavLink>
         <NavLink
           to="/contact"
           className="mobile-cta"
