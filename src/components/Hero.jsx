@@ -44,11 +44,11 @@ const Hero = () => {
 
           {/* SOCIALS */}
           <div className="hero-socials">
-            <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">
+            <a href="https://github.com/DevDemola" target="_blank" rel="noreferrer">
               <FaGithub />
             </a>
 
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/omiyejuwon-ademola-b9bb91310" target="_blank" rel="noreferrer">
               <FaLinkedin />
             </a>
 

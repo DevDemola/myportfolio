@@ -19,7 +19,7 @@ const projects = [
     tech: ["Vanilla css", "React", "Typescript"],
   },
   {
-    title: "VENDOROS",
+    title: "VENDOROS (still building)",
     description:
       "A modern vendor management dashboard built with React that allows business owners to manage orders, products, and customers in one place. The platform features a clean responsive UI, interactive tables, modals for creating orders and products, and a mobile-friendly sidebar for seamless navigation across devices.",
     img: "/vendoros.png",

@@ -12,8 +12,9 @@ const NavBar = () => {
     <header className="navbar">
       <div className="navbar-inner">
         <div className="logo">
-          <span className="name">Ademola Omiyejuwon</span>
-          {/* <span className="role">Software Engineer</span> */}
+          <span className="name">DEMOLA .O</span>
+
+          <span className="role">Software Engineer</span>
         </div>
 
         <nav className="nav-links">

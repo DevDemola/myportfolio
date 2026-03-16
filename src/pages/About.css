@@ -80,6 +80,7 @@
 .experiences-title {
   font-size: 30px;
   margin-bottom: 30px;
+  color:burlywood;
 }
 .experience-card:hover {
   transform: translateX(5px);
@@ -91,6 +92,56 @@
   align-items: center;
   gap: 15px;
   margin-bottom: 10px;
+}
+/* CURVE JOURNEY SECTION */
+
+.curve-journey {
+  margin-top: 100px;
+}
+
+.journey-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 60px;
+  color: burlywood;
+}
+
+.journey-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.journey-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.journey-text h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: burlywood;
+}
+
+.journey-text p {
+  line-height: 1.8;
+  color: #ddd;
+  margin-bottom: 18px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .journey-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .journey-text {
+    margin-top: 20px;
+  }
 }
 
 .company-logo {

@@ -118,7 +118,41 @@ const About = () => {
             ))}
           </div>
         </div>
+        <div className="curve-journey">
+          <h2 className="journey-title">
+            My Journey at THE CURVE AFRICA by Kora
+          </h2>
 
+          <div className="journey-container">
+            <div className="journey-image">
+              <img src="/Team Splita.jpg" alt="The Curve Africa Journey" />
+            </div>
+
+            <div className="journey-text">
+              <h3>The Curve Africa <span style={{fontSize:"16px"}}>by kora</span></h3>
+
+              <p>
+                My journey at The Curve Africa by Kora was a defining step in my
+                development as a software engineer. During this program, I
+                deepened my understanding of frontend engineering while
+                collaborating with other aspiring developers across Africa.
+              </p>
+
+              <p>
+                Through hands-on projects, mentorship, and continuous learning,
+                I strengthened my skills in building modern web applications,
+                writing maintainable code, and translating design ideas into
+                functional user interfaces.
+              </p>
+
+              <p>
+                The experience helped shape my problem-solving mindset and
+                reinforced my passion for creating technology that impacts
+                people at scale.
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="about-experiences">
           <h2 className="experiences-title">My Experiences</h2>
           {experiences.map((exp, index) => (
