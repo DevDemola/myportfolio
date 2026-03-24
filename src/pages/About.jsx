@@ -1,181 +1,106 @@
 import React from "react";
-import { FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaFigma } from "react-icons/fa";
-import {
-  SiTypescript,
-  SiJavascript,
-  // SiNextdotjs,
-  // SiSolidity,
-  SiFirebase,
-  // SiVueDotJs,
-  SiAngular,
-  SiTailwindcss,
-  SiVuedotjs,
-} from "react-icons/si";
 import "./About.css";
-
-const experiences = [
-  {
-    role: "Frontend Developer",
-    company: "PayOnUs",
-    duration: "Jan 2026 - Present",
-    description:
-      "Currently interning at Payonus, where I contribute to building and improving web applications, working with modern technologies, and gaining hands-on experience in fintech solutions.",
-    logo: "/onus.jpeg",
-  },
-  {
-    role: "Frontend Developer",
-    company: "The Curve Africa",
-    duration: "May 2025 - Nov 2025",
-    description:
-      "Designed intuitive interfaces and collaborated with developers to implement seamless designs.",
-    logo: "/curve.png",
-  },
-  {
-    role: "Frontend Developer",
-    company: "SPLITA",
-    duration: "May 2025 - Nov 2025",
-    description:
-      "Building responsive and user-friendly interfaces, turning complex designs into seamless web experiences using modern frontend technologies.",
-    logo: "/splitalogo.png",
-  },
-];
-
-const skills = [
-  { name: "React", icon: <FaReact />, color: "#61dafb" },
-  { name: "TypeScript", icon: <SiTypescript />, color: "#3178c6" },
-  { name: "JavaScript", icon: <SiJavascript />, color: "#f7df1e" },
-  { name: "CSS3", icon: <FaCss3Alt />, color: "#264de4" },
-  { name: "HTML5", icon: <FaHtml5 />, color: "#e34f26" },
-  // { name: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
-  { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
-  // { name: "Solidity", icon: <SiSolidity />, color: "#363636" },
-  { name: "UI/UX Design", icon: <FaFigma />, color: "#f24e1e" },
-  { name: "Firebase", icon: <SiFirebase />, color: "#ffca28" },
-  { name: "Vue.js", icon: <SiVuedotjs />, color: "#42b883" },
-  { name: "Angular", icon: <SiAngular />, color: "#dd0031" },
-  { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38b2ac" },
-];
-
+import { BiArrowBack } from "react-icons/bi";
+// import profileImg from "./profile.jpg"; // replace with your image
+import { useEffect } from 'react';
 const About = () => {
+  
+
+// Add this useEffect to your component
+useEffect(() => {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  revealElements.forEach(el => observer.observe(el));
+
+  return () => observer.disconnect();
+}, []);
   return (
-    <section id="about" className="about grid-bg">
+    <>
+    <section className="about">
       <div className="about-container">
-        <span className="about-eyebrow">ABOUT ME</span>
-
-        <h2 className="about-title">
-          I don’t just write code.
-          <br />
-          <span>I design how systems think.</span>
-        </h2>
-
-        <p className="about-text">
-          I’m a Frontend Developer who builds interactive, responsive, and
-          beautiful web experiences. I turn complex interfaces into intuitive
-          designs that users love, focusing on performance, accessibility, and
-          smooth interactions.
-        </p>
-
-        <p className="about-text">
-          My approach blends engineering discipline with design thinking. I
-          believe good frontend code should feel obvious to users, maintainable
-          for developers, and resilient across devices. I’m passionate about
-          crafting interfaces that are not only functional but delightful to
-          use.
-        </p>
-
-        <div className="about-highlights">
-          <div className="highlight-card">
-            <h3>Frontend Engineering</h3>
-            <p>
-              Crafting responsive, accessible interfaces with attention to
-              detail, performance, and motion.
-            </p>
-          </div>
-
-          <div className="highlight-card">
-            <h3>Problem Solving</h3>
-            <p>
-              Breaking down complex problems into simple, elegant solutions that
-              scale.
-            </p>
-          </div>
+        
+        {/* Image */}
+        <div className="about-image">
+          <img src="/me.png" alt="Tosin" />
         </div>
 
-        <div className="about-skills">
-          <h2 className="skills-title">My Skills</h2>
-          <div className="skills-container">
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className="skill-icon-wrapper"
-                title={skill.name}
-              >
-                <div className="skill-icon" style={{ color: skill.color }}>
-                  {skill.icon}
-                </div>
-                <span className="skill-name">{skill.name}</span>
-              </div>
-            ))}
-          </div>
+        {/* Text */}
+        <div className="about-content">
+          <h2>Hi! I’m Demola.</h2>
+
+          <p>
+            I’m a website designer and developer, but I do things differently.
+            I hate jargon, I hate complicated technical words, and I offer a
+            range of services to cater for brands at all stages of their journey.
+          </p>
+
+          <p>
+            I work with ambitious brands & businesses on their website materials.
+            What makes me unique is my strong visual aesthetic — I have a good eye
+            for design and I know how to make things look fun, stylish, and still
+            help you get more customers.
+          </p>
+
+          <p>
+            My process is simple: we work together to figure out exactly what your
+            business needs before I bring it to life. Everything I do is collaborative,
+            supportive, and creative.
+          </p>
+
+          <a href="/projects" className="about-btn">
+            SEE WHAT I’VE CREATED <BiArrowBack/>
+          </a>
         </div>
-        <div className="curve-journey">
-          <h2 className="journey-title">
-            My Journey at THE CURVE AFRICA by Kora
-          </h2>
 
-          <div className="journey-container">
-            <div className="journey-image">
-              <img src="/Team Splita.jpg" alt="The Curve Africa Journey" />
-            </div>
-
-            <div className="journey-text">
-              <h3>The Curve Africa <span style={{fontSize:"16px"}}>by kora</span></h3>
-
-              <p>
-                My journey at The Curve Africa by Kora was a defining step in my
-                development as a software engineer. During this program, I
-                deepened my understanding of frontend engineering while
-                collaborating with other aspiring developers across Africa.
-              </p>
-
-              <p>
-                Through hands-on projects, mentorship, and continuous learning,
-                I strengthened my skills in building modern web applications,
-                writing maintainable code, and translating design ideas into
-                functional user interfaces.
-              </p>
-
-              <p>
-                The experience helped shape my problem-solving mindset and
-                reinforced my passion for creating technology that impacts
-                people at scale.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="about-experiences">
-          <h2 className="experiences-title">My Experiences</h2>
-          {experiences.map((exp, index) => (
-            <div key={index} className="experience-card">
-              <div className="experience-header">
-                <img
-                  src={exp.logo}
-                  alt={exp.company}
-                  className="company-logo"
-                />
-                <div className="experience-info">
-                  <h3>
-                    {exp.role} - {exp.company}
-                  </h3>
-                  <span className="experience-duration">{exp.duration}</span>
-                </div>
-              </div>
-              <p>{exp.description}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
+     <section className="work  reveal-on-scroll">
+      <div className="work-container">
+
+        {/* LEFT CARD */}
+        <div className="card">
+          <h3>Let’s work together if…</h3>
+
+          <ul className="list good">
+            <li>You want a website that keeps visitors engaged – and nudges them into buying from you.</li>
+            <li>You want a simple, sleek and efficient design and development process.</li>
+            <li>You’d like to partner with someone who cares as much about your business as you do.</li>
+            <li>You like what I do and want some of that for yourself!!</li>
+          </ul>
+
+          <button className="primary-btn">LET’S DO THIS!</button>
+        </div>
+
+        {/* RIGHT CARD */}
+        <div className="card">
+          <h3>We’re not the best fit if…</h3>
+
+          <ul className="list bad">
+            <li>You only care about your website being pretty, not how user-friendly it is.</li>
+            <li>You like to micromanage every part of the process.</li>
+            <li>You care only about how much it costs.</li>
+            <li>You want someone to just follow orders instead of collaborating.</li>
+          </ul>
+
+          <button className="secondary-btn">HMM, MAYBE NOT?</button>
+        </div>
+
+      </div>
+    </section>
+    </>
   );
 };
 

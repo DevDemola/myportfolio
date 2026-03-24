@@ -1,0 +1,404 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.brands-services-section {
+  width: 100%;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0a0a2a 0%, #1a1a3a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.brands-services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(100, 255, 218, 0.15);
+  color: #64ffda;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.badge-icon {
+  font-size: 12px;
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.section-title .highlight {
+  color: #64ffda;
+  position: relative;
+  display: inline-block;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.subtitle-icon {
+  color: #64ffda;
+  font-size: 20px;
+}
+
+/* Hero Tagline */
+.hero-tagline {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tagline-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.trend-icon {
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64ffda;
+  font-size: 32px;
+}
+
+.tagline-title {
+  font-size: 56px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.viral-text {
+  background: linear-gradient(135deg, #64ffda, #ff6b6b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  font-size: 24px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icon.youtube {
+  color: #ff0000;
+}
+
+.social-icon.instagram {
+  color: #e4405f;
+}
+
+.social-icon.tiktok {
+  color: #000000;
+  background: white;
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+/* Brands Grid */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* Brand Card */
+.brand-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 40px 30px;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.brand-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(100, 255, 218, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.brand-card-inner {
+  text-align: center;
+}
+
+/* Brand Icon */
+.brand-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.brand-card:hover .icon-circle {
+  transform: scale(1.05) rotate(5deg);
+}
+
+/* Brand Name */
+.brand-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Services List */
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.service-tag {
+  background: rgba(100, 255, 218, 0.15);
+  color: #64ffda;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Brand Stats */
+.brand-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+}
+
+.stats-icon {
+  color: #64ffda;
+  font-size: 14px;
+}
+
+/* Hover Effect */
+.brand-hover-effect {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.brand-card:hover .brand-hover-effect {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.learn-more {
+  color: #64ffda;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.learn-more:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 50px;
+  padding: 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 12px;
+  background: rgba(100, 255, 218, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64ffda;
+}
+
+.stat-number {
+  display: block;
+  font-size: 42px;
+  font-weight: 800;
+  color: #64ffda;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* CTA Button */
+.cta-wrapper {
+  text-align: center;
+}
+
+.brands-cta-btn {
+  background: linear-gradient(135deg, #64ffda, #00d9a5);
+  border: none;
+  color: #0a192f;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.brands-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(100, 255, 218, 0.4);
+}
+
+.btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.brands-cta-btn:hover .btn-arrow {
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .brands-services-section {
+    padding: 60px 16px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .tagline-title {
+    font-size: 36px;
+  }
+  
+  .trend-icon {
+    left: -30px;
+    font-size: 24px;
+  }
+
+  .brands-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-name {
+    font-size: 24px;
+  }
+
+  .stat-number {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .tagline-title {
+    font-size: 28px;
+  }
+  
+  .trend-icon {
+    display: none;
+  }
+
+  .brand-name {
+    font-size: 22px;
+  }
+
+  .stats-section {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+}
