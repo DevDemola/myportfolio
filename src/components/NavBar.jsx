@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Navbar.css";
+import "./NavBar.css";
 import { FiArrowRight, FiMenu, FiX } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
