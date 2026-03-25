@@ -8,9 +8,10 @@ import {
 } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import Testimonial from "./Testimonial";
+import {  useNavigate } from "react-router-dom";
 
 const Hero = () => {
-
+const Navigate = useNavigate("")
   // Add this useEffect to your component
   useEffect(() => {
     const observerOptions = {
@@ -51,23 +52,23 @@ const Hero = () => {
             </p>
 
             <div className="hero-buttons">
-              <button className="btn primary">
+              <button className="btn primary" onClick={()=>Navigate("/contact")}>
                 Let’s Create Your Site <FiArrowRight />
               </button>
 
-              <button className="btn outline">
+              <button className="btn outline" onClick={()=>Navigate("/projects")}>
                 Take Me to Portfolio <FiArrowRight />
               </button>
             </div>
 
-            <div className="brands">
+            {/* <div className="brands">
               <p>Proudly worked with these brands:</p>
-            </div>
-            <div className="logos">
+            </div> */}
+            {/* <div className="logos">
               <img src="/onus.jpeg" alt="onus" />
               <img src="/flatterz.png" alt="flatterz" />
               <img src="/curve.png" alt="curve" />
-            </div>
+            </div> */}
           </div>
 
           <div className="hero-image">
@@ -104,7 +105,7 @@ const Hero = () => {
                   still doesn’t look good enough to showcase your work.
                 </p>
 
-                <button className="card-btn">
+                <button className="card-btn" onClick={()=>Navigate("/contact")}>
                   Let’s Fix That <FiArrowUpRight />
                 </button>
               </div>
@@ -120,7 +121,7 @@ const Hero = () => {
                   so you can manage orders and deliveries without wasting time.
                 </p>
 
-                <button className="card-btn">
+                <button className="card-btn" onClick={()=>Navigate("/contact")}>
                   Let’s Upgrade it <FiArrowUpRight />
                 </button>
               </div>
@@ -145,7 +146,7 @@ const Hero = () => {
                   more you.
                 </p>
 
-                <button className="card-btn">
+                <button className="card-btn" onClick={()=>Navigate("/contact")}>
                   Let’s Launch It <FiArrowUpRight />
                 </button>
               </div>
@@ -161,7 +162,7 @@ const Hero = () => {
                   and how you’re the best service provider for them
                 </p>
 
-                <button className="card-btn">
+                <button className="card-btn" onClick={()=>Navigate("/contact")}>
                   Let’s Build It <FiArrowUpRight />
                 </button>
               </div>

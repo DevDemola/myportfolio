@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./NavBar.css";
 import { FiArrowRight, FiMenu, FiX } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
-
+import { IoArrowForwardCircle } from "react-icons/io5";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -60,7 +60,7 @@ const Navbar = () => {
         <div className="navbar-container">
           {/* Logo */}
           <div className="logo" onClick={() => handleScroll("/")}>
-            <span className="logo-bold">Demola</span>
+            <img src="./LOGO.png" alt="Brand Logo" className="logo-img" />
           </div>
 
           {/* Nav Links */}
@@ -75,7 +75,7 @@ const Navbar = () => {
             {isMobile && (
               <button
                 className="mobile-cta-btn"
-                onClick={() => handleScroll("#contact")}
+                onClick={() => handleScroll("/contact")}
               >
                 Start a Project <FiArrowRight className="arrow-icon" />
               </button>
@@ -86,9 +86,9 @@ const Navbar = () => {
           {!isMobile && (
             <button
               className="cta-btn"
-              onClick={() => handleScroll("#contact")}
+              onClick={() => handleScroll("/contact")}
             >
-              Start a Project <FiArrowRight className="arrow-icon" />
+              Start a Project <IoArrowForwardCircle className="arrow-icon" />
             </button>
           )}
 

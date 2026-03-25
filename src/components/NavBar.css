@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #0A192F;
+  background-color: #0a192f;
   padding-top: 85px; /* Add padding to prevent content from hiding behind fixed navbar */
 }
 
@@ -48,7 +48,7 @@ body {
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   border-radius: 60px;
-  padding: 12px 24px;
+  padding: 12px 24px 12px 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -58,26 +58,36 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Logo */
 .logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: #0A192F;
+  display: flex;
+  align-items: center;
+  height: 100%;
   cursor: pointer;
-  transition: all 0.3s ease;
-  background: linear-gradient(135deg, #0A192F, #1E3A5F);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: #0A192F;
 }
 
-.logo:hover {
-  transform: scale(1.02);
+.logo-img {
+  height: clamp(50px, 8vw, 80px);
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.25s ease;
 }
 
-.logo-bold {
-  font-weight: 800;
-  letter-spacing: -0.5px;
+.logo:hover .logo-img {
+  transform: scale(1.05);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .logo-img {
+    height: 30px;
+  }
 }
 
 /* Nav Links - Desktop */
@@ -88,7 +98,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #2C3E50;
+  color: #2c3e50;
   font-size: 15px;
   font-weight: 500;
   position: relative;
@@ -103,7 +113,7 @@ body {
   position: absolute;
   width: 0%;
   height: 2px;
-  background: linear-gradient(90deg, #0A192F, #1E3A5F);
+  background: linear-gradient(90deg, #0a192f, #1e3a5f);
   left: 0;
   bottom: -2px;
   transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -111,7 +121,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #0A192F;
+  color: #0a192f;
 }
 
 .nav-links a:hover::after {
@@ -120,7 +130,7 @@ body {
 
 /* CTA Button */
 .cta-btn {
-  background: linear-gradient(135deg, #0A192F, #1E3A5F);
+  background: linear-gradient(135deg, #0a192f, #1e3a5f);
   border: none;
   color: white;
   padding: 10px 24px;
@@ -138,11 +148,14 @@ body {
 .cta-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(10, 25, 47, 0.3);
-  background: linear-gradient(135deg, #1E3A5F, #0A192F);
+  background: linear-gradient(135deg, #1e3a5f, #0a192f);
 }
 
 .arrow-icon {
   transition: transform 0.3s ease;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
 }
 
 .cta-btn:hover .arrow-icon {
@@ -156,7 +169,7 @@ body {
   cursor: pointer;
   background: none;
   border: none;
-  color: #0A192F;
+  color: #0a192f;
   width: 44px;
   height: 44px;
   align-items: center;
@@ -177,25 +190,25 @@ body {
   body {
     padding-top: 75px;
   }
-  
+
   .navbar {
     padding: 12px;
   }
-  
+
   .navbar-container {
     padding: 8px 20px;
     border-radius: 50px;
   }
-  
+
   .logo {
     font-size: 22px;
   }
-  
+
   /* Menu Icon Styling */
   .menu-icon {
     display: flex;
   }
-  
+
   /* Full Screen Mobile Menu - Slide from Right */
   .nav-links {
     position: fixed;
@@ -203,7 +216,7 @@ body {
     right: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, #0A192F 0%, #1E3A5F 100%);
+    background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 100%);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -246,11 +259,21 @@ body {
     animation: slideInFromRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 
-  .nav-links.active a:nth-child(1) { animation-delay: 0.1s; }
-  .nav-links.active a:nth-child(2) { animation-delay: 0.18s; }
-  .nav-links.active a:nth-child(3) { animation-delay: 0.26s; }
-  .nav-links.active a:nth-child(4) { animation-delay: 0.34s; }
-  .nav-links.active a:nth-child(5) { animation-delay: 0.42s; }
+  .nav-links.active a:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .nav-links.active a:nth-child(2) {
+    animation-delay: 0.18s;
+  }
+  .nav-links.active a:nth-child(3) {
+    animation-delay: 0.26s;
+  }
+  .nav-links.active a:nth-child(4) {
+    animation-delay: 0.34s;
+  }
+  .nav-links.active a:nth-child(5) {
+    animation-delay: 0.42s;
+  }
 
   @keyframes slideInFromRight {
     to {
@@ -304,14 +327,14 @@ body {
   .cta-btn {
     display: none;
   }
-  
+
   /* Mobile CTA Button inside menu */
   .mobile-cta-btn {
     display: block;
     margin-top: 30px;
     background: linear-gradient(135deg, #64ffda, #00d9a5);
     border: none;
-    color: #0A192F;
+    color: #0a192f;
     padding: 16px 40px;
     border-radius: 50px;
     cursor: pointer;
@@ -325,11 +348,11 @@ body {
     opacity: 0;
     transform: translateX(30px);
   }
-  
+
   .nav-links.active .mobile-cta-btn {
     animation: slideInFromRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards;
   }
-  
+
   .mobile-cta-btn:hover {
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 12px 30px rgba(100, 255, 218, 0.4);
@@ -341,36 +364,36 @@ body {
   body {
     padding-top: 70px;
   }
-  
+
   .navbar {
     padding: 10px;
   }
-  
+
   .navbar-container {
     padding: 6px 16px;
     border-radius: 40px;
   }
-  
+
   .logo {
     font-size: 20px;
   }
-  
+
   .menu-icon {
     width: 38px;
     height: 38px;
     font-size: 24px;
   }
-  
+
   .nav-links a {
     font-size: 20px;
     padding: 14px 24px;
   }
-  
+
   .mobile-cta-btn {
     padding: 14px 32px;
     font-size: 16px;
   }
-  
+
   .nav-links::before {
     top: 20px;
     right: 20px;
@@ -385,26 +408,26 @@ body {
   body {
     padding-top: 65px;
   }
-  
+
   .navbar-container {
     padding: 5px 14px;
   }
-  
+
   .logo {
     font-size: 18px;
   }
-  
+
   .menu-icon {
     width: 34px;
     height: 34px;
     font-size: 22px;
   }
-  
+
   .nav-links a {
     font-size: 18px;
     padding: 12px 20px;
   }
-  
+
   .mobile-cta-btn {
     padding: 12px 28px;
     font-size: 15px;

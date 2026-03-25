@@ -5,17 +5,17 @@ const projects = [
   {
     title: "Flatterz",
     image: "/esther.png",
-    tags: ["Branding", "Social Media", "Print"],
+    // tags: ["Branding", "Social Media", "Print"],
   },
   {
     title: "LuxeLips",
     image: "/luxelips.png",
-    tags: ["Branding", "Website", "Social"],
+    // tags: ["Branding", "Website", "Social"],
   },
   {
     title: "Vendoros",
     image: "/vendoros.png",
-    tags: ["Branding", "Website"],
+    // tags: ["Branding", "Website"],
   },
 ];
 
@@ -34,11 +34,11 @@ export default function BrandsSection() {
             <div className="card-contents">
               <h3>{project.title}</h3>
 
-              <div className="tags">
+              {/* <div className="tags">
                 {project.tags.map((tag, i) => (
                   <span key={i}>{tag}</span>
                 ))}
-              </div>
+              </div> */}
 
               <button className="view-btn">View Project →</button>
             </div>
