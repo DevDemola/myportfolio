@@ -1,96 +1,166 @@
 import React, { useState } from "react";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import "./Contact.css";
 
-const Contact = () => {
+export default function Contact() {
+  const [selectedOption, setSelectedOption] = useState("Need a Website");
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
+    firstName: "",
+    lastName: "",
+    phone: "",
     message: "",
   });
-  const [submitted, setSubmitted] = useState(false);
+
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [apiError, setApiError] = useState("");
+
+  const options = [
+    "Need a Website",
+    "Consult me",
+    // "Invite me to speak",
+    "Add me to a project",
+  ];
+
+  const validate = () => {
+    const newErrors = {};
+
+    if (!formData.email) newErrors.email = "Email is required";
+    else if (!/\S+@\S+\.\S+/.test(formData.email))
+      newErrors.email = "Invalid email format";
+
+    if (!formData.firstName) newErrors.firstName = "First name is required";
+    if (!formData.lastName) newErrors.lastName = "Last name is required";
+    if (!formData.phone) newErrors.phone = "Phone number is required";
+    if (!formData.message) newErrors.message = "Message is required";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    setSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
-    setTimeout(() => setSubmitted(false), 3000);
+    if (!validate()) return;
+
+    setLoading(true);
+    setApiError("");
+
+    try {
+      // simulate API call
+      await new Promise((res) => setTimeout(res, 1500));
+
+      console.log({ ...formData, service: selectedOption });
+
+      setSuccess(true);
+      setFormData({ email: "", firstName: "", lastName: "", phone: "" });
+    } catch (err) {
+      setApiError("Something went wrong. Try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <section id="contact" className="contact-section">
+    <section className="contact">
       <div className="contact-container">
-        <h2 className="contact-title">Get in Touch</h2>
-        <p className="contact-intro">
-          I’m always open to discussing new projects, collaborations, or just
-          saying hi. Let’s connect!
-        </p>
+        <div className="contact-image">
+          <img src="/me.png" alt="profile" />
+        </div>
 
-        <div className="contact-content">
-          <div className="contact-info">
-            <div className="info-card">
-              <FaEnvelope className="info-icon" />
-              <h4>Email</h4>
-              <p>omiyejuwonademola@gmail.com.com</p>
-            </div>
-            <div className="info-card">
-              <FaPhone className="info-icon" />
-              <h4>Phone</h4>
-              <p>+234 815 841 1808</p>
-            </div>
-            <div className="info-card">
-              <FaMapMarkerAlt className="info-icon" />
-              <h4>Location</h4>
-              <p>Lagos, Nigeria</p>
-            </div>
+        <div className="contact-form">
+          <h4 className="welcome">👋 Hi, Welcome...</h4>
+          <h2>What do you need?</h2>
+          <p>Please select one option:</p>
+
+          <div className="options">
+            {options.map((opt) => (
+              <button
+                key={opt}
+                className={selectedOption === opt ? "active" : ""}
+                onClick={() => setSelectedOption(opt)}
+                type="button"
+              >
+                {opt}
+              </button>
+            ))}
           </div>
 
-          
-          <div className="contact-form-wrapper">
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
+          <form onSubmit={handleSubmit}>
+            <div className="input-group">
+              <label>Email Address *</label>
               <input
                 type="email"
                 name="email"
-                placeholder="Your Email"
                 value={formData.email}
                 onChange={handleChange}
-                required
               />
+              {errors.email && <span className="error">{errors.email}</span>}
+            </div>
+
+            <div className="input-group">
+              <label>First Name *</label>
+              <input
+                type="text"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+              />
+              {errors.firstName && (
+                <span className="error">{errors.firstName}</span>
+              )}
+            </div>
+
+            <div className="input-group">
+              <label>Last Name *</label>
+              <input
+                type="text"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+              />
+              {errors.lastName && (
+                <span className="error">{errors.lastName}</span>
+              )}
+            </div>
+
+            <div className="input-group">
+              <label>Phone Number *</label>
+              <input
+                type="text"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+              {errors.phone && <span className="error">{errors.phone}</span>}
+            </div>
+            <div className="input-group">
+              <label>Message *</label>
               <textarea
                 name="message"
-                placeholder="Your Message"
-                rows="6"
                 value={formData.message}
                 onChange={handleChange}
-                required
-              ></textarea>
-              <button type="submit" className="submit-btn">
-                Send Message
-              </button>
-              {submitted && (
-                <p className="submit-success">
-                  Message sent! I’ll get back to you soon.
-                </p>
+                placeholder="Tell me about your project..."
+                rows="4"
+              />
+              {errors.message && (
+                <span className="error">{errors.message}</span>
               )}
-            </form>
-          </div>
+            </div>
+
+            <button className="submit-btn" disabled={loading}>
+              {loading ? "Sending..." : "Submit →"}
+            </button>
+
+            {success && <p className="success">Message sent 🚀</p>}
+            {apiError && <p className="error">{apiError}</p>}
+          </form>
         </div>
       </div>
     </section>
   );
-};
-
-export default Contact;
+}

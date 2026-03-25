@@ -345,7 +345,7 @@ body {
 .blue {
  
   color: white;
-} */
+} 
 
 /* Image card */
 .image-card {
@@ -373,7 +373,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   font-size: 18px;
 }
 
@@ -612,7 +612,7 @@ body {
   }
 
   .hero-text p {
-    font-size: 15px;
+    font-size: 18px;
     max-width: 500px;
   }
 
@@ -665,6 +665,7 @@ body {
 @media (max-width: 480px) {
   .hero {
     padding: 20px 15px;
+    display: flex;
   }
 
   .hero-container {
@@ -677,7 +678,7 @@ body {
   }
 
   .hero-text p {
-    font-size: 14px;
+    font-size: 19px;
     margin-top: 15px;
     line-height: 1.5;
   }
@@ -688,7 +689,7 @@ body {
   }
 
   .btn {
-    padding: 8px 16px;
+    padding: 8px 25px;
     font-size: 12px;
   }
 
@@ -727,7 +728,7 @@ body {
   }
 
   .brand-logo {
-    width: 85px;
+    width: 100px;
     height: 60px;
   }
 
@@ -751,7 +752,7 @@ body {
   }
 
   .hero-text p {
-    font-size: 13px;
+    font-size: 30px;
   }
 
   .btn {

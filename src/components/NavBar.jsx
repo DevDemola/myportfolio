@@ -68,7 +68,7 @@ const Navbar = () => {
             <a onClick={() => handleScroll("/")}>Home</a>
             <a onClick={() => handleScroll("/about")}>About Me</a>
             <a onClick={() => handleScroll("/projects")}>Portfolio</a>
-            <a onClick={() => handleScroll("/services")}>Services</a>
+            {/* <a onClick={() => handleScroll("/services")}>Services</a> */}
             <a onClick={() => handleScroll("/contact")}>Contact</a>
 
             {/* Mobile CTA Button */}
